@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "../../components/ui/card";
+import { Button } from "../../components/ui/button";
 import { motion } from "framer-motion";
 import { ethers } from "ethers";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
@@ -11,7 +11,7 @@ const NFTMarketplace = () => {
   const [walletConnected, setWalletConnected] = useState(false);
   
   const connectWallet = async () => {
-    if (window.ethereum) {
+    if (typeof window !== "undefined" && window.ethereum) {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       await provider.send("eth_requestAccounts", []);
       setWalletConnected(true);
@@ -37,8 +37,8 @@ const NFTMarketplace = () => {
         {[1, 2, 3].map((nft) => (
           <Card key={nft} className="rounded-xl shadow-lg">
             <CardContent className="p-4">
-              <img src={`https://via.placeholder.com/300?text=NFT+${nft}`} alt={`NFT ${nft}`} className="rounded-lg mb-4" />
-              <h3 className="text-xl font-semibold">NFT #{nft}</h3>
+              <img src="https://via.placeholder.com/300?text=NFT+${nft}" alt="NFT ${nft}" className="rounded-lg mb-4" />
+              <h3 className="text-xl font-semibold">NFT #${nft}</h3>
               <p className="text-gray-500">Precio: 0.1 ETH</p>
               <Button className="mt-4 w-full bg-green-500 text-white">Comprar</Button>
             </CardContent>
@@ -50,4 +50,3 @@ const NFTMarketplace = () => {
 };
 
 export default NFTMarketplace;
-
