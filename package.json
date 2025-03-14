@@ -1,0 +1,22 @@
+{
+  "name": "afrodita-marketplace",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.21",
+    "next": "^15.2.2",
+    "postcss": "^8.5.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.14",
+    "ethers": "^5.7.2",
+    "framer-motion": "^10.16.1",
+    "@solana/wallet-adapter-react-ui": "^0.9.17"
+  }
+}
+
