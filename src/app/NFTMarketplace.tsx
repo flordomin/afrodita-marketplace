@@ -11,8 +11,8 @@ const NFTMarketplace = () => {
   const [walletConnected, setWalletConnected] = useState(false);
   
   const connectWallet = async () => {
-    if (typeof window !== "undefined" && window.ethereum) {
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
+    if (typeof window !== "undefined" && (window as any).ethereum) {
+      const provider = new ethers.providers.Web3Provider((window as any).ethereum);
       await provider.send("eth_requestAccounts", []);
       setWalletConnected(true);
     } else {
