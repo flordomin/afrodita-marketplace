@@ -35,14 +35,14 @@ const NFTMarketplace = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {[1, 2, 3].map((nft) => (
-          <Card key={nft} className="rounded-xl shadow-lg">
+          <Card key={nft}><div className="rounded-xl shadow-lg">
             <CardContent className="p-4">
               <img src="https://via.placeholder.com/300?text=NFT+${nft}" alt="NFT ${nft}" className="rounded-lg mb-4" />
               <h3 className="text-xl font-semibold">NFT #${nft}</h3>
               <p className="text-gray-500">Precio: 0.1 ETH</p>
               <Button className="mt-4 w-full bg-green-500 text-white">Comprar</Button>
             </CardContent>
-          </Card>
+          </div></Card>
         ))}
       </div>
     </div>
