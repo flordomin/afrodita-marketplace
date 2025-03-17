@@ -22,7 +22,7 @@ const NFTMarketplace = () => {
 
   return (
     <div className="p-6 max-w-6xl mx-auto">
-      <motion.h1 className="text-4xl font-bold mb-6" animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 1 }}>
+      <motion.h1 layout style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "1.5rem" }} animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 1 }}>
         Mi NFT Marketplace 🎨
       </motion.h1>
       
